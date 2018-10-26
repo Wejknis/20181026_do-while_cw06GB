@@ -3,7 +3,6 @@
 
 int main() {
         int liczba;
-        int licznik_petli = 0;
         char decyzja = 'n';
 
         printf("Program liczy największą liczbę mniejszą od\n");
@@ -17,14 +16,10 @@ int main() {
         // zrób nieparzystą
         if (!(liczba % 2)) --liczba;
 
-        for (; !(liczba % 3) || !(liczba % 5) || !(liczba % 7); liczba -= 2) {
-            licznik_petli++;
-        }
+        for (; !(liczba % 3) || !(liczba % 5) || !(liczba % 7); liczba -= 2) {}
         printf("znaleziona liczba: %d\n", liczba);
 
-        printf("\n");
-        printf("liczba pętli wyniosła: %d\n", licznik_petli);
-
+        // każdy znak kończy / małe lub duże 't' kontynuuje
         printf("\nczy liczyć jeszcze raz? (t/n) ");
         scanf(" %c", &decyzja);
 
